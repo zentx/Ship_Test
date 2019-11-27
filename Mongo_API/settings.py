@@ -78,6 +78,10 @@ WSGI_APPLICATION = 'Mongo_API.wsgi.application'
 
 DATABASES = {}
 
+mongoengine.connect(
+    db='ships',
+    host='localhost'
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
