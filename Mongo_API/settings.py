@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from decouple import config
 import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,12 +23,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l-q5t$t(9vzi$f(+q&2ob1f3k7zqyahulmu*34ru31mh7!!17z'
-
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -79,11 +79,13 @@ WSGI_APPLICATION = 'Mongo_API.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+
+
 DATABASES = {}
 
 mongoengine.connect(
     db='ships',
-    host='mongodb+srv://zentx:muereterotopo1@cluster0-3g54j.mongodb.net/ships?retryWrites=true&w=majority'
+    host=config('MONGO_URL')
 )
 
 # Password validation
