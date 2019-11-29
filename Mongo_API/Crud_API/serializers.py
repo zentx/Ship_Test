@@ -4,4 +4,4 @@ from Mongo_API.Crud_API.models import Ship
 class ShipSerializer(serializers.DocumentSerializer):
     class Meta:
         model = Ship
-        fields = '__all__'
+        fields = ('_id', 'name', 'model', 'length', 'crew', 'passengers')
