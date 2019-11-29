@@ -4,12 +4,14 @@ certifi==2018.1.18
 chardet==3.0.4
 colorama==0.4.1
 dataclasses==0.4
+dj-database-url==0.5.0
 Django==2.0.3
 django-mongodb-engine==0.6.0
 django-rest-framework-mongoengine==3.4.0
 djangorestframework==3.10.3
 djangotoolbox==1.8.0
 djongo==1.2.22
+dnspython==1.16.0
 idna==2.6
 isort==4.3.21
 lazy-object-proxy==1.4.3
@@ -17,10 +19,12 @@ mccabe==0.6.1
 mongoengine==0.18.2
 pylint==2.4.4
 pymongo==3.9.0
+python-decouple==3.3
 pytz==2018.3
 requests==2.18.4
 six==1.13.0
 sqlparse==0.2.4
 typed-ast==1.4.0
 urllib3==1.22
+whitenoise==4.1.4
 wrapt==1.11.2
