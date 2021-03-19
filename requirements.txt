@@ -8,7 +8,7 @@ dj-database-url==0.5.0
 Django==2.0.3
 django-mongodb-engine==0.6.0
 django-rest-framework-mongoengine==3.4.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 djangotoolbox==1.8.0
 djongo==1.2.22
 dnspython==1.16.0
